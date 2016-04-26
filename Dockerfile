@@ -18,3 +18,4 @@ RUN set -ex \
         && tar xvzf jdk-8u77-linux-x64.tar.gz
 
 ENV JAVA_HOME=/usr/java/jdk${ORACLE_JDK_VERSION}
+ENV PATH=${PATH}:${JAVA_HOME}/bin
