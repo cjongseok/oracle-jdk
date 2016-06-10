@@ -1,13 +1,10 @@
-from ubuntu:14.04
+from centos:7
 
 ENV ORACLE_JDK_VERSION=1.8.0_77
 
 # install dependencies
 RUN set -ex \
-        && apt-get update \
-        && apt-get -y install wget curl build-essential \
-        && apt-get -y install alien dpkg-dev debhelper \
-        && apt-get -y install dnsutils
+        && yum -y install wget curl alien
 
 
 # install oracle jdk 8
